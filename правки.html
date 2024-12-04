@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект Нега - Социальная доставка еды</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@font-face {
+  font-family: "Novelist";
+  src: url("Novelist/Novelist_free.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Novelist', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #2947A9;
+    padding-left: 100px;
+    font-size: 30px;
+}
+
+.hero {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    max-height: 956px;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 956px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 956px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: black;
+}
+
+.content {
+    max-width: 1920px;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.chicken-leg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    transform: rotate(-30deg);
+}
+
+.content-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin: 6rem 0 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    Top: 1200px;
+    Left: 250px;
+}
+
+.section-title1 {
+    font-size: 2.5rem;
+    margin: 6rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #000;
+}
+
+.finance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.finance-item {
+    text-align: center;
+
+}
+
+.finance-item img {
+    width: 650px;
+    height: 420px;
+}
+
+.finance-item p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    width: 357px;
+    height: 50px;
+    margin-left: 170px;
+}
+
+.income-section {
+    padding: 4rem;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.income-section img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.income-text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-size: 1.25rem;
+}
+
+.global-goal {
+    padding: 4rem 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.global-goal img {
+    width: 512px;
+    height: 308px;
+}
+
+.global-goal-title {
+    color: #C5A572;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.global-goal-content {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    max-width: 700px;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.coffee-spot {
+    padding: 4rem 2rem;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.coffee-spot-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.coffee-spot-title h2:first-child {
+    color: #C5A572;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.coffee-spot-title h2:last-child {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.coffee-spot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.coffee-spot-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    width: 656.82px;
+    height: 875.76px;
+}
+
+.container-info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.container-image {
+    flex: 0 0 400px;
+}
+
+.container-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.container-text {
+    flex: 1;
+}
+
+.container-text h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.container-text p {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    padding-right: 100px;
+}
+
+.nav-links a {
+    font-size: 20px;
+    font-family: 'Novelist', sans-serif;
+    padding-right: 25px;
+    left: 100;
+    width: 200px;
+    height: 25px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Добавьте эти стили в конец вашего существующего CSS */
+
+/* Для небольших телефонов (до 320px) */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .content-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .content-text {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin: 3rem 0 1.5rem;
+    }
+
+    .finance-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .finance-item p {
+        font-size: 1rem;
+    }
+
+    .global-goal img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .global-goal-title {
+        font-size: 1.75rem;
+    }
+
+    .global-goal-content {
+        font-size: 1rem;
+    }
+
+    .coffee-spot-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-text h3 {
+        font-size: 1.125rem;
+    }
+
+    .container-text p {
+        font-size: 0.875rem;
+    }
+
+    .nav-links {
+        display: none; /* Скрываем меню на маленьких экранах */
+    }
+}
+
+/* Для средних телефонов (320px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    .logo {
+        color: #2947A9;
+        padding-left: 30px;
+        font-size: 11px;
+    }
+
+    .nav-links {
+        padding-right: 20px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        font-family: 'Novelist', sans-serif;
+        padding-right: 25px;
+        left: 100;
+        width: 200px;
+        height: 25px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .content {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .finance-grid {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .income-section {
+        padding: 2rem 1rem;
+    }
+
+    .container-image {
+        flex: 0 0 250px;
+    }
+}
+
+/* Для больших телефонов (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .finance-grid {
+        padding: 1.5rem;
+    }
+
+    .container-image {
+        flex: 0 0 300px;
+    }
+}
+
+/* Общие стили для всех мобильных устройств */
+@media (max-width: 768px) {
+    .logo {
+        color: #2947A9;
+        padding-left: 30px;
+        font-size: 13px;
+    }
+
+    .nav-links {
+        padding-right: 20px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        font-family: 'Novelist', sans-serif;
+        padding-right: 25px;
+        left: 100;
+        width: 200px;
+        height: 25px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .hero {
+        height: 50vh;
+        padding: 1rem;
+    }
+
+    .content {
+        margin: 2rem auto;
+    }
+
+    .finance-grid,
+    .income-section,
+    .coffee-spot-grid {
+        gap: 1.5rem;
+    }
+
+    .global-goal {
+        gap: 1.5rem;
+    }
+
+    /* Улучшаем отступы для лучшей читаемости */
+    .section-title {
+        margin: 3rem 0 1.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Делаем изображения более компактными */
+    .chicken-leg {
+        max-width: 250px;
+    }
+
+    .income-section img {
+        max-width: 250px;
+    }
+
+    /* Улучшаем навигацию для мобильных */
+    .nav-links {
+        gap: 1rem;
+    }
+
+    /* Делаем контейнер с фотографиями кофейни более компактным */
+    .coffee-spot {
+        padding: 2rem 1rem;
+    }
+
+    .content-text {
+        font-size: 10px;
+        line-height: 1.8;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .content-text h2 {
+        font-size: 13px;
+        margin-bottom: 2rem;
+        color: #000;
+    }
+
+    .section-title {
+        font-size: 13px;
+        margin: 6rem 0 3rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        color: #000;
+        position: absolute;
+        Top: 755px;
+        Left: 20px;
+    }
+    .section-title1 {
+        font-size: 15px;
+        margin: 6rem 0 0;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        color: #000;
+    }
+
+    .finance-item img {
+        width: 226.14px;
+        height: 151px;
+    }
+
+    .finance-item p {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 10px;
+        line-height: 1.6;
+        width: 357px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .finance-grid {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 4rem;
+        margin: 0 auto;
+    }  
+
+    .income-text {
+        font-size: 10px;
+    }
+
+    .global-goal-title {
+        font-size: 20px;
+    }
+
+    .global-goal-content {
+        font-size: 15px;
+    }
+
+    .coffee-spot-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        width: 180px;
+        height: 210px;
+    }
+
+    .global-goal {
+        width: 100%;
+        margin-left: 35px;
+    }
+    .global-goal img {
+        width: 100%;
+        width: 150px;
+        height: 90px;
+    }
+
+    .coffee-spot-title h2:first-child {
+        font-size: 20px;
+    }
+
+    .coffee-spot-title h2:last-child { 
+        font-size: 20px;
+    }
+
+    .container-image {
+        width: 150px;
+        flex: 0;
+    }
+
+    .container-image img {
+        width: 150px;
+    }
+
+    .container-text h3 {
+        margin-bottom: 0.5rem;
+        font-size: 17px;
+    }
+
+    /* Улучшаем отображение контактной информации */
+    .container-text p {
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Проект Нега</div>
+        <div class="nav-links">
+            <a href="#main">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#contact">Контакты</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="api/хлеб.jpg" alt="Свежий хлеб">
+            <h1>Проект Нега</h1>
+        </div>
+    </section>
+
+    <section class="content">
+        <img class="chicken-leg" src="api/курица.jpg" alt="Куриная ножка">
+        <div class="content-text">
+            <h2>Социальная доставка еды</h2>
+            <p>Мы делаем проект, где бабушки-пенсионеры готовят дома свою вкуснейшую домашнюю еду. Затем эта еда идет на доставку людям, тем самым люди и вкусно поедят и помогут нуждающимся пенсионерам, купив их кушание.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Распределение финансов с заказанного блюда</h2>
+    <div class="finance-grid">
+        <div class="finance-item">
+            <img src="api/пельмень.png" alt="Пельмень">
+            <p>20% себестоимость продуктов</p>
+        </div>
+        <div class="finance-item">
+            <img src="api/пельмень.png" alt="Пельмень">
+            <p>55-60% оплата труда бабушки</p>
+        </div>
+        <div class="finance-item">
+            <img src="api/пельмень.png" alt="Пельмень">
+            <p>5% налоговые выплаты</p>
+        </div>
+        <div class="finance-item">
+            <img src="api/пельмень.png" alt="Пельмень">
+            <p>20% оплата труда команды проекта маркетинг оборудование</p>
+        </div>
+    </div>
+
+    <h2 class="section-title1">Сколько получает пенсионер</h2>
+    <div class="income-section">
+        <img src="api/селедка.png" alt="Селедка">
+        <div class="income-text">
+            <p>В среднем за 8-10 порций и порых блюд пенсионер получает 1500 рублей тратя час времени на это это хороший и комфортный заработок для пенсионера для сравнения обычный повар получает 300-400 рублей за час работы разница в 4-5 раз</p>
+        </div>
+    </div>
+
+    <div class="global-goal">
+        <img src="api/оладь.jpg" alt="Блин">
+        <div>
+            <h2 class="global-goal-title">Глобальная цель</h2>
+            <p class="global-goal-content">За счет такой социальной доставки еды создать хороший инструмент перераспределения доходов по всей стране</p>
+        </div>
+        <img src="api/оладь.jpg" alt="Блин">
+    </div>
+
+    <section class="coffee-spot">
+        <div class="coffee-spot-title">
+            <h2>Проект только в заведении</h2>
+            <h2>Сотрудничаем пока только с Парой Коффеен</h2>
+        </div>
+
+        <div class="coffee-spot-grid">
+            <img src="api/1.jpg" alt="Coffee Spot витрина 1">
+            <img src="api/2.jpg" alt="Coffee Spot витрина 2">
+            <img src="api/3.jpg" alt="Coffee Spot витрина 3">
+            <img src="api/4.jpg" alt="Coffee Spot витрина 4">
+        </div>
+
+        <div class="container-info">
+            <div class="container-image">
+                <img src="api/еда.jpg" alt="Контейнер для еды">
+            </div>
+            <div class="container-text">
+                <h3>Контейнеры в которых мы доставляем еду</h3>
+                <p>89015885539 - пишите в TG/WhatsApp по всем предложениям</p>
+                <p>Разрешительная документация на еду (там ссылка будет)</p>
+                <p>ТГ бот для заказа еды домой (тоже там ссылка будет)</p>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
